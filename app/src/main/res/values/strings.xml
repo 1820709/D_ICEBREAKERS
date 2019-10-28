@@ -1,6 +1,8 @@
 <resources>
     <string name="app_name">DiceRoller2</string>
-    <string name="dice_number">Enter number 1-6</string>
+    <string name="dice_number"></string>
     <string name="button_click">Roll the dice</string>
     <string name="textview">TextView</string>
+    <string name="enter_number_lbl">Enter number 1-6</string>
+    <string name="scoreTextView">Score</string>
 </resources>

@@ -1,8 +1,31 @@
 <resources>
     <string name="app_name">DiceRoller2</string>
+    <string name="empty"></string>
     <string name="dice_number"></string>
     <string name="button_click">Roll the dice</string>
     <string name="textview">TextView</string>
-    <string name="enter_number_lbl">Enter number 1-6</string>
-    <string name="scoreTextView">Score</string>
+    <string name="enter_number_lbl">Enter number 1-6:</string>
+    <string name="scoreLbl">Score:</string>
+    <string name="btnIce1Lbl">Let\'s play D-ICEBREAKERS</string>
+    <string name="btnIce2Lbl">Modify D-ICEBREAKER</string>
+    <string name="btnCancelIceLbl">CANCEL</string>
+    <string name="btnSaveIceLbl">SAVE</string>
+    <string name="btnFinishLbl">FINISH</string>
+    <string name="btnSlackShareLbl">SHARE YOUR SCORE ON SLACK</string>
+
+    <!--ICE Breaker strings  -->
+    <string name="ice1">If you could go anywhere in the world, where would you go?</string>
+    <string name="ice2">If you were stranded on a desert island, what three things would you want to take with you?</string>
+    <string name="ice3">If you could eat only one food for the rest of your life, what would that be?</string>
+    <string name="ice4">If you won a million dollars, what is the first thing you would buy?</string>
+    <string name="ice5">If you could spend the day with one fictional character, who would it be?</string>
+    <string name="ice6">If you found a magic lantern and a genie gave you three wishes, what would you wish?</string>
+    <string-array name="iceList">
+        <item>@string/ice1</item>
+        <item>@string/ice2</item>
+        <item>@string/ice3</item>
+        <item>@string/ice4</item>
+        <item>@string/ice5</item>
+        <item>@string/ice6</item>
+    </string-array>
 </resources>

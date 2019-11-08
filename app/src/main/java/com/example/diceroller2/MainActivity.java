@@ -27,10 +27,10 @@ public class MainActivity extends AppCompatActivity {
     private String[] iceList;
     private int rolledNumber = 0;
     private String iceStr;
+    String guessCountStr;
     //private Intent intent;
     private final static int REQUEST_CODE_1 = 1;
 
-    //public static final String ICE_INDEX = "com.example.diceroller2.ICE_INDEX";
     public static final String ICE_MESSAGE = "com.example.diceroller2.ICE_MESSAGE";
     public static final String SCORE = "com.example.diceroller2.SCORE";
 
@@ -45,13 +45,6 @@ public class MainActivity extends AppCompatActivity {
 
         Resources res = getResources();
         iceList = res.getStringArray(R.array.iceList);
-
-//        intent = getIntent();
-//        String iceMsg = intent.getStringExtra(EditIcebreaker.ICE_MESSAGE_C);
-//        if (iceMsg != null) {
-//            iceList[rolledNumber-1] = iceMsg;
-//            showIceBreaker(rolledNumber-1);
-//        }
 
         imageViewDice = (ImageView) findViewById(R.id.image_view_dice);
         imageViewDice.setOnClickListener(new View.OnClickListener() {
@@ -73,17 +66,15 @@ public class MainActivity extends AppCompatActivity {
 
     public void finish(View view) {
         Intent intent = new Intent(this, SlackActivity.class);
-        intent.putExtra(SCORE, guessCount);
+        intent.putExtra(SCORE, guessCountStr);
         startActivity(intent);
     }
 
     public void editIceBreaker(View view) {
-
         if (rolledNumber > 0) {
             Intent intent = new Intent(this, EditIcebreaker.class);
             String iceMessage = iceTxt.getText().toString();
             intent.putExtra(ICE_MESSAGE, iceMessage);
-            //startActivityForResult(intent, REQUEST_CODE);
             startActivityForResult(intent, REQUEST_CODE_1);
         } else {
             congratsTxt.setText("Press I'm feeling lucky or Let's play D-ICEBREAKER button first!");
@@ -148,8 +139,7 @@ public class MainActivity extends AppCompatActivity {
                 congratsTxt.setText("Congratulations!");
                 // increase score
                 guessCount++;
-                String guessCountStr = Integer.toString(guessCount);
-                //TextView textViewScore = (TextView)findViewById(R.id.scoreCount);
+                guessCountStr = Integer.toString(guessCount);
                 scoreCount.setText(guessCountStr);
             }
         }
